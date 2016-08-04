@@ -17,6 +17,12 @@
 */
 
 #define CHARSUPPORTED 37
+#define INTERVAL 500
+#define DOT INTERVAL
+#define DASH INTERVAL * 3
+#define GAPINWORDS INTERVAL * 7
+#define GAPINCHARS INTERVAL * 3
+
 
 // constants won't change. Used here to set a pin number :
 const int ledPin =  13;      // the number of the LED pin
@@ -24,12 +30,6 @@ const int ledPin =  13;      // the number of the LED pin
 // Variables will change :
 int ledState = LOW;             // ledState used to set the LED
 
-// constants won't change :
-const long interval = 500;
-const long dot = interval;
-const long dash = interval * 3;
-const long gapinchars = interval * 3;
-const long gapinwords = interval * 7;
 
 char alpha[CHARSUPPORTED] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
                               'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
@@ -104,26 +104,26 @@ void signalandwait(int d)
   digitalWrite(ledPin, HIGH);
   delay(d);
   digitalWrite(ledPin, LOW);
-  delay(interval);
+  delay(INTERVAL);
 }
 void toSignal(String message) {
   for (int j = 0; j < message.length(); j++)
   {
     if (message[j] == '.')
     {
-      signalandwait(dot);
+      signalandwait(DOT);
     }
     else if (message[j] == '-')
     {
-      signalandwait(dash);
+      signalandwait(DASH);
     }
     else if (message[j] == '|') {
       //Don't do any signal just wait
-      delay(gapinwords);
+      delay(GAPINWORDS);
     }
     else if (message[j] == ' ') {
       //Don't do any signal just wait
-      delay(gapinchars);
+      delay(GAPINCHARS);
     }
   }
 }
