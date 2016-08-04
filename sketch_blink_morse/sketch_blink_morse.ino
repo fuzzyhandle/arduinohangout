@@ -28,6 +28,7 @@ int ledState = LOW;             // ledState used to set the LED
 const long interval = 500;
 const long dot = interval;
 const long dash = interval * 3;
+const long gapinchars = interval * 3;
 const long gapinwords = interval * 7;
 
 char alpha[CHARSUPPORTED] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
@@ -117,11 +118,12 @@ void toSignal(String message) {
       signalandwait(dash);
     }
     else if (message[j] == '|') {
-      signalandwait(gapinwords);
+      //Don't do any signal just wait
+      delay(gapinwords);
     }
     else if (message[j] == ' ') {
       //Don't do any signal just wait
-      delay(interval);
+      delay(gapinchars);
     }
   }
 }
