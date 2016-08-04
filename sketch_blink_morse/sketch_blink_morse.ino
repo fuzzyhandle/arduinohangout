@@ -7,7 +7,7 @@
    Note: on most Arduinos, there is already an LED on the board
   that's attached to pin 13, so no hardware is needed for this example.
 
-  created 2005
+  created 2016
   by Hrishikesh Date
 
   This example code is in the public domain.
@@ -50,9 +50,7 @@ void loop() {
   // here is where you'd put code that needs to be running all the time.
 
   //for not just use small case
-  //String message = "hello world";
-  //String message = "sos";
-  String message = "kanaloa";
+  String message = "hello world";
   String morsedmessage = toMorse(message);
   
   //Signal the message
