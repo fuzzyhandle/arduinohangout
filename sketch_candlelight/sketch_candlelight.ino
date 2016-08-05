@@ -2,7 +2,7 @@
 
 Cover the LEDs with a tissue paper to diffuse the light and then observe the effect in a dark area
   
-Refer to the corresponfing fritzing diagram
+Refer to the corresponding fritzing diagram
 
 */
 const int ledPin1 =  5;   
