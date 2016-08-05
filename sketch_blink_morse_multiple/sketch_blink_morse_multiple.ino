@@ -1,13 +1,14 @@
-/* Blink without Delay
+/* Morse Code
 
   Light up the LED to send a Morse code for a given string
+  
+  Use 1 LED for a DOT and 3 LEDs for a Dash
+  
   To get the morse code just open the Serial Terminal and type in a string and hit ENTER.
   You should see the LED blinking with the Morse code for the String
 
   The circuit:
-   LED attached from pin 13 to ground.
-   Note: on most Arduinos, there is already an LED on the board
-  that's attached to pin 13, so no hardware is needed for this example.
+  Check the Fritzing diagram
   
   created 2016
   by Hrishikesh Date
