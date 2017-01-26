@@ -1,0 +1,7 @@
+// #define SPARKFUN_TITLE "Pune Weather"
+// #define SPARKFUN_OUTPUT_URL "http://data.sparkfun.com/output/xxxx"
+// #define SPARKFUN_INPUT_URL "http://data.sparkfun.com/input/xxxx"
+// #define SPARKFUN_MANAGE_URL "http://data.sparkfun.com/streams/xxxx"
+#define SPARKFUN_PUBLIC_KEY "PLACEHOLDER_PUBLIC_KEY"
+#define SPARKFUN_PRIVATE_KEY "PLACEHOLDER_PRIVATE_KEY"
+#define SPARKFUN_DELETE_KEY "PLACEHOLDER_DELETE_KEY"
